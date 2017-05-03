@@ -25,7 +25,7 @@ namespace Optical_illusion_text
             backColor.FillRectangle(Brushes.Khaki, 0, 0, 900, 600);
             backColor.Dispose();
 
-            writetext = writetext + "*";
+            writetext = writetext + ">";
             int txtLength = writetext.Length;
 
             //그래픽 생성 
