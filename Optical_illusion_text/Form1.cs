@@ -25,7 +25,7 @@ namespace Optical_illusion_text
             backColor.FillRectangle(Brushes.Khaki, 0, 0, 900, 600);
             backColor.Dispose();
 
-            writetext = writetext + ">";
+            writetext = writetext + "-";
             int txtLength = writetext.Length;
 
             //그래픽 생성 
@@ -54,7 +54,14 @@ namespace Optical_illusion_text
             {
                 for (int a = 0; a < widLetter; a++)
                 {
-                    letterNumber = (txtLength * 3000 + a - b) % txtLength;
+                    if ((b % 2) == 0)
+                    {
+                        letterNumber = a % txtLength;
+                    }
+                    else
+                    {
+                        letterNumber = (a + txtLength - 1) % txtLength;
+                    }
                     switch ((8 + a % 8 - b % 8) % 8)
                     {
                         case 0:
@@ -90,7 +97,14 @@ namespace Optical_illusion_text
             {
                 for (int a = 0; a < widLetter; a++)
                 {
-                    letterNumber = (txtLength * 1000 + a - b) % txtLength;
+                    if ((b % 2) == 0)
+                    {
+                        letterNumber = a % txtLength;
+                    }
+                    else
+                    {
+                        letterNumber = (a + txtLength - 1) % txtLength;
+                    }
                     switch ((8 + a % 8 - b % 8) % 8)
                     {
                         case 4:
@@ -126,7 +140,14 @@ namespace Optical_illusion_text
             {
                 for (int a = 0; a < widLetter; a++)
                 {
-                    letterNumber = (txtLength * 1000 + a - b) % txtLength;
+                    if ((b%2) == 0)
+                    {
+                        letterNumber = a % txtLength;
+                    }
+                    else
+                    {
+                        letterNumber = (a + txtLength - 1) % txtLength;
+                    }
                     graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.MediumSlateBlue, a * widDistance, b * heiDistance);
                 }
             }
