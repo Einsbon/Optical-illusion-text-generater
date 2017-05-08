@@ -18,7 +18,7 @@ namespace Optical_illusion_text
             InitializeComponent();
         }
 
-        public static Bitmap DrawIllusionText(string writetext, Font asdfasdf, int heiPercent, int widPercent)
+        public static Bitmap DrawIllusionText(string writetext, Font asdfasdf, int heiPercent, int widPercent, int pixel)
         {
             Bitmap mybitmap = new Bitmap(900, 600, PixelFormat.Format32bppRgb);
             Graphics backColor = Graphics.FromImage(mybitmap);
@@ -65,28 +65,28 @@ namespace Optical_illusion_text
                     switch ((8 + a % 8 - b % 8) % 8)
                     {
                         case 0:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance - widDistance / 10, b * heiDistance + heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance - widDistance / 10 - pixel, b * heiDistance + heiDistance / 10 + pixel);
                             break;
                         case 1:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance, b * heiDistance + heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance, b * heiDistance + heiDistance / 10 + pixel);
                             break;
                         case 2:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance + widDistance / 10, b * heiDistance + heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance + widDistance / 10 + pixel, b * heiDistance + heiDistance / 10 + pixel);
                             break;
                         case 3:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance + widDistance / 10, b * heiDistance);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance + widDistance / 10 + pixel, b * heiDistance);
                             break;
                         case 4:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance + widDistance / 10, b * heiDistance - heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance + widDistance / 10 + pixel, b * heiDistance - heiDistance / 10 - pixel);
                             break;
                         case 5:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance, b * heiDistance - heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance, b * heiDistance - heiDistance / 10- pixel);
                             break;
                         case 6:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance - widDistance / 10, b * heiDistance - heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance - widDistance / 10 - pixel, b * heiDistance - heiDistance / 10 - pixel);
                             break;
                         case 7:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance - widDistance / 10, b * heiDistance);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.Black, a * widDistance - widDistance / 10 - pixel, b * heiDistance);
                             break;
                     }
                 }
@@ -108,28 +108,28 @@ namespace Optical_illusion_text
                     switch ((8 + a % 8 - b % 8) % 8)
                     {
                         case 4:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance - widDistance / 10, b * heiDistance + heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance - widDistance / 10 - pixel, b * heiDistance + heiDistance / 10 + pixel);
                             break;
                         case 5:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance, b * heiDistance + heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance, b * heiDistance + heiDistance / 10 + pixel);
                             break;
                         case 6:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance + widDistance / 10, b * heiDistance + heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance + widDistance / 10 + pixel, b * heiDistance + heiDistance / 10 + pixel);
                             break;
                         case 7:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance + widDistance / 10, b * heiDistance);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance + widDistance / 10 + pixel, b * heiDistance);
                             break;
                         case 0:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance + widDistance / 10, b * heiDistance - heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance + widDistance / 10 + pixel, b * heiDistance - heiDistance / 10 - pixel);
                             break;
                         case 1:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance, b * heiDistance - heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance, b * heiDistance - heiDistance / 10 - pixel);
                             break;
                         case 2:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance - widDistance / 10, b * heiDistance - heiDistance / 10);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance - widDistance / 10 - pixel, b * heiDistance - heiDistance / 10 - pixel);
                             break;
                         case 3:
-                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance - widDistance / 10, b * heiDistance);
+                            graphics.DrawString(Convert.ToString(writetext[letterNumber]), font, Brushes.White, a * widDistance - widDistance / 10 - pixel, b * heiDistance);
                             break;
                     }
                 }
@@ -163,7 +163,7 @@ namespace Optical_illusion_text
         {
             try
             {
-                pictureBox1.Image = DrawIllusionText(txtLetter.Text, myfont, Convert.ToInt16(txtHeiPercent.Text), Convert.ToInt16(txtWidPercent.Text));
+                pictureBox1.Image = DrawIllusionText(txtLetter.Text, myfont, Convert.ToInt16(txtHeiPercent.Text), Convert.ToInt16(txtWidPercent.Text), Convert.ToInt16(txtPixel.Text));
             }
             catch
             {
