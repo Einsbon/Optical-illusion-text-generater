@@ -47,6 +47,7 @@
             this.txtWidPercent = new System.Windows.Forms.TextBox();
             this.txtPixel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnMan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +70,7 @@
             // 
             this.btnSave.Location = new System.Drawing.Point(805, 13);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(107, 25);
+            this.btnSave.Size = new System.Drawing.Size(107, 26);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save image";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -98,7 +99,7 @@
             this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(492, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 25);
+            this.button1.Size = new System.Drawing.Size(144, 26);
             this.button1.TabIndex = 12;
             this.button1.Text = "Generate image";
             this.button1.UseVisualStyleBackColor = true;
@@ -204,11 +205,22 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Gap between black snd white shadows (pixel)";
             // 
+            // btnMan
+            // 
+            this.btnMan.Location = new System.Drawing.Point(805, 45);
+            this.btnMan.Name = "btnMan";
+            this.btnMan.Size = new System.Drawing.Size(107, 26);
+            this.btnMan.TabIndex = 24;
+            this.btnMan.Text = "Mannual";
+            this.btnMan.UseVisualStyleBackColor = true;
+            this.btnMan.Click += new System.EventHandler(this.btnMan_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 784);
+            this.Controls.Add(this.btnMan);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPixel);
             this.Controls.Add(this.txtWidPercent);
@@ -256,6 +268,7 @@
         private System.Windows.Forms.TextBox txtWidPercent;
         private System.Windows.Forms.TextBox txtPixel;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnMan;
     }
 }
 

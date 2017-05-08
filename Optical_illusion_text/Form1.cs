@@ -217,5 +217,10 @@ namespace Optical_illusion_text
         {
             e.Link.LinkData = "einsbon@naver.com";
         }
+
+        private void btnMan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("put the letters on the textbox and choose font, and fill another textboxes. And click the create button.")
+        }
     }
 }
