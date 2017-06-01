@@ -18,11 +18,11 @@ namespace Optical_illusion_text
             InitializeComponent();
         }
 
-        public static Bitmap DrawIllusionText(string writetext, Font asdfasdf, int heiPercent, int widPercent, int pixel)
+        public static Bitmap DrawIllusionText(string writetext, Font asdfasdf, int heiPercent, int widPercent, int pixel, int sizeX, int sizeY)
         {
-            Bitmap mybitmap = new Bitmap(900, 600, PixelFormat.Format32bppRgb);
+            Bitmap mybitmap = new Bitmap(sizeX, sizeY, PixelFormat.Format32bppRgb);
             Graphics backColor = Graphics.FromImage(mybitmap);
-            backColor.FillRectangle(Brushes.Khaki, 0, 0, 900, 600);
+            backColor.FillRectangle(Brushes.Khaki, 0, 0, sizeX, sizeY);
             backColor.Dispose();
 
             writetext = writetext + "-";
@@ -44,8 +44,8 @@ namespace Optical_illusion_text
             int heiDistance = hei * heiPercent / 100;
             int widDistance = wid * widPercent / 100;
 
-            int widLetter = 900 / widDistance;
-            int heightLetter = 600 / heiDistance;
+            int widLetter = sizeX / widDistance;
+            int heightLetter = sizeY / heiDistance;
 
             int letterNumber;
 
@@ -163,7 +163,18 @@ namespace Optical_illusion_text
         {
             try
             {
-                pictureBox1.Image = DrawIllusionText(txtLetter.Text, myfont, Convert.ToInt16(txtHeiPercent.Text), Convert.ToInt16(txtWidPercent.Text), Convert.ToInt16(txtPixel.Text));
+                pictureBox1.Width = int.Parse(txtWidth.Text);
+                pictureBox1.Height = int.Parse(txtHeight.Text);
+                if (int.Parse(txtWidth.Text) > 900)
+                {
+                    this.Width = int.Parse(txtWidth.Text) + 40;
+                }
+                if (int.Parse(txtHeight.Text) > 900)
+                {
+                    this.Height = int.Parse(txtHeight.Text) + 223;
+                }
+
+                pictureBox1.Image = DrawIllusionText(txtLetter.Text, myfont, Convert.ToInt16(txtHeiPercent.Text), Convert.ToInt16(txtWidPercent.Text), Convert.ToInt16(txtPixel.Text), pictureBox1.Size.Width, pictureBox1.Size.Height);
             }
             catch
             {
@@ -220,7 +231,7 @@ namespace Optical_illusion_text
 
         private void btnMan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("put the letters on the textbox and choose font, and fill another textboxes. And click the create button.")
+            MessageBox.Show("put the letters on the textbox and choose font, and fill another textboxes. And click the create button.");
         }
     }
 }

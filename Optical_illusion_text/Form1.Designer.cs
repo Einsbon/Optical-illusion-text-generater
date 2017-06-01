@@ -48,6 +48,10 @@
             this.txtPixel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnMan = new System.Windows.Forms.Button();
+            this.txtWidth = new System.Windows.Forms.TextBox();
+            this.txtHeight = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +72,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(805, 13);
+            this.btnSave.Location = new System.Drawing.Point(805, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(107, 26);
             this.btnSave.TabIndex = 7;
@@ -128,7 +132,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(519, 116);
+            this.label1.Location = new System.Drawing.Point(522, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 36);
             this.label1.TabIndex = 15;
@@ -138,7 +142,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(669, 116);
+            this.linkLabel1.Location = new System.Drawing.Point(672, 56);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(240, 18);
             this.linkLabel1.TabIndex = 16;
@@ -150,7 +154,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(669, 133);
+            this.label2.Location = new System.Drawing.Point(672, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 18);
             this.label2.TabIndex = 17;
@@ -207,7 +211,7 @@
             // 
             // btnMan
             // 
-            this.btnMan.Location = new System.Drawing.Point(805, 45);
+            this.btnMan.Location = new System.Drawing.Point(672, 14);
             this.btnMan.Name = "btnMan";
             this.btnMan.Size = new System.Drawing.Size(107, 26);
             this.btnMan.TabIndex = 24;
@@ -215,11 +219,49 @@
             this.btnMan.UseVisualStyleBackColor = true;
             this.btnMan.Click += new System.EventHandler(this.btnMan_Click);
             // 
+            // txtWidth
+            // 
+            this.txtWidth.Location = new System.Drawing.Point(764, 107);
+            this.txtWidth.Name = "txtWidth";
+            this.txtWidth.Size = new System.Drawing.Size(64, 26);
+            this.txtWidth.TabIndex = 25;
+            this.txtWidth.Text = "900";
+            // 
+            // txtHeight
+            // 
+            this.txtHeight.Location = new System.Drawing.Point(764, 139);
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(64, 26);
+            this.txtHeight.TabIndex = 26;
+            this.txtHeight.Text = "600";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(641, 111);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 19);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "image width";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(641, 143);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 19);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "image height";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 784);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtHeight);
+            this.Controls.Add(this.txtWidth);
             this.Controls.Add(this.btnMan);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPixel);
@@ -269,6 +311,10 @@
         private System.Windows.Forms.TextBox txtPixel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnMan;
+        private System.Windows.Forms.TextBox txtWidth;
+        private System.Windows.Forms.TextBox txtHeight;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 
